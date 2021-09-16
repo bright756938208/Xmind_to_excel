@@ -1,0 +1,16 @@
+解压后，
+xmind_to_excel_config.ini 和 xmind转excel工具.exe 必须在同一目录。
+
+然后双击运行 
+xmind转excel工具.exe 按照提示操作即可
+生成的excel会在xmind转excel工具.exe同目录下，如果有同名的会覆盖
+
+xmind_to_excel_config.ini 
+是转成excel的配置文件，会根据配置的规则来生成excel，
+可以打开进行各种配置调整，具体配置怎么改，可以滚动到配置文件的最下面(模板配置说明)，
+那里有详细的说明
+
+支持的版本：
+xmind 6，xmind 8 都支持。
+通常来讲，如果右上角有“试用”字样的，通常无法支持。
+不支持的版本，转出来会提示让你更新到xmind 8 update 3 之类的信息。
