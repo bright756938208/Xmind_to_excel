@@ -1,4 +1,5 @@
 import xmind
+# pip3 install xmind
 import os
 import sys
 import xlsxwriter
