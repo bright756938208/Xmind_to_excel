@@ -1,3 +1,10 @@
+# 本代码归个人所有, 分享出来可用于学习 和使用；不得私自用于商用目的，如需商用需经得本人同意
+# 版权归属JiangLiang
+
+# 第三方包
+# pip install xmind
+# pip install xlsxwriter
+
 import xmind
 import os
 import sys
