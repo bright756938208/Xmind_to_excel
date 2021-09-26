@@ -159,9 +159,8 @@ def process_xmind_data(xmind_all_level):
 def get_excel_row_data_for_xmind_row(xmind_row_data, excel_template):
     '''
     将xmind行数据按配置的规则转换成excel行数据
-    :param excel_row_data:
-    :param row:
-    :param worksheet:
+    :param xmind_row_data: xmind行数据
+    :param excel_template: excel模板类实例
     :return: excel行数据列表
     '''
     excel_template_name = excel_template.excel_template_name
@@ -257,9 +256,9 @@ def get_excel_row_data_for_xmind_row(xmind_row_data, excel_template):
 def get_cell_data_for_rule(xmind_row_data, cell_content_rule, excel_template):
     '''
     根据传入的规则，从xmind行数据中提取对应单元格的数据
-    :param xmind_row_data:
-    :param cell_content_rule:
-    :return:
+    :param xmind_row_data: xmind提取的其中一行数据
+    :param cell_content_rule: 从xmind行中提取到excel单元格的规则 str
+    :return: 提取出来的cell数据
     '''
     cell_data = ""
     sub_key = "title"
@@ -320,9 +319,9 @@ def get_cell_data_for_rule(xmind_row_data, cell_content_rule, excel_template):
 def get_replaced_markers(markers, sub_key, excel_template):
     """
     获取根据配置项转换后的markers
-    :param markers:
-    :param sub_key:
-    :param excel_template:
+    :param markers: 转换前的markers
+    :param sub_key: markers子项关键字
+    :param excel_template: excel模板实例
     :return: 转换后的markers值，如markers为空列表，则返回""
     """
     if not markers:
@@ -342,6 +341,8 @@ def get_replaced_markers(markers, sub_key, excel_template):
 def process_repeat_for_column(writer_excel_datas, excel_template):
     '''
     处理重复行数据
+    :param writer_excel_datas: 已经转换成excel可以直接写入的多行数据的列表
+    :param excel_template: excel模板
     :return: 最终的excel数据列表
     '''
     row_number_max = len(writer_excel_datas)
@@ -390,7 +391,7 @@ def write_xmind_data_to_excel(xmind_row_data_list_dict, excel_template):
     '''
     :param xmind_row_data_list_dict: xmind行数据列表，列表是一个画布， 字典保存了多个画布
     :param excel_template: 生成excel的模板
-    :return:
+    :return: None
     '''
     for sheet_name in xmind_row_data_list_dict:
         xmind_row_data_list = xmind_row_data_list_dict[sheet_name]
